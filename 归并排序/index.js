@@ -32,4 +32,12 @@ let math_merge = (a, b) =>
             a[0] > b[0] ? [b[0], ...math_merge(a, b.slice(1))] :
                 [a[0], ...math_merge(a.slice(1), b)]
 
+
+let sort = (arr) => {
+    let k = arr.length
+    if(k ===  1) {return arr}
+    let left = arr.slice(0, parseInt(k / 2))
+    let right = arr.slice(parseInt(k / 2))
+    return math_merge(sort(left), sort(right))
+}
     
