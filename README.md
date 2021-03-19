@@ -1,1 +1,1 @@
-# arithmetic-study
+# 简单算法学习
